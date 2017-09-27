@@ -1,4 +1,4 @@
-package co.simplon.poleEmploi.decouverteServlets;
+package co.simplon.poleEmploi.decouverte.jsp;
 
 import java.io.IOException;
 import java.io.PrintWriter;

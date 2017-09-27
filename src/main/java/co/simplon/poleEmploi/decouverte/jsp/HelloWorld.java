@@ -1,4 +1,4 @@
-package co.simplon.poleEmploi.decouverteServlets;
+package co.simplon.poleEmploi.decouverte.jsp;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -44,10 +44,17 @@ public class HelloWorld extends HttpServlet {
 			message += "World";
 		}
 
-		response.setContentType("text/html");
-
-		PrintWriter out = response.getWriter();
-		out.println("<h1>" + message + "</h1>");
+//		response.sendRedirect("./hello.jsp");
+		if (parametre.equals("")) 
+			{parametre="World";
+			request.setAttribute("Nom", parametre);
+			}
+		else request.setAttribute("Nom", parametre.toUpperCase());
+		request.getRequestDispatcher("hello.jsp").forward(request, response);
+//		response.setContentType("text/html");
+//
+//		PrintWriter out = response.getWriter();
+//		out.println("<h1>" + message + "</h1>");
 	}
 
 	public void destroy() {
