@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ByeWorld extends HttpServlet {
 
+
 	private String message;
 
 	public void init() throws ServletException {
